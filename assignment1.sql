@@ -1,4 +1,3 @@
-PROMPT *** Group Number: 5 ***
 PROMPT *** David Kevork
 PROMPT *** Matthew Thorne
 PROMPT *** Phillip Weinstock
