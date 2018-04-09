@@ -1,7 +1,7 @@
 PROMPT *** Group Number: 5 ***
-PROMPT *** 102100902 -> David Kevork
-PROMPT *** 102104302 -> Matthew Thorne
-PROMPT *** 102101219 -> Phillip Weinstock
+PROMPT *** David Kevork
+PROMPT *** Matthew Thorne
+PROMPT *** Phillip Weinstock
 
 PROMPT *** Drop Table WorkSession ***
 -- Drop Table WorkSession
