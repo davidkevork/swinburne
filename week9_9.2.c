@@ -3,11 +3,13 @@
 void AddTwo(float *f, float *s, float *t);
 
 int main(){
- int x = 10;
- int y = 20;
- int sum;
- AddTwo(&x, &y, &sum);
- printf("x: %d, y: %d, sum: %d\n", x, y, sum);
+ float j;
+ float k;
+ float m;
+ printf("Enter 2 numbers to add: ");
+ scanf("%f %f", &j, &k);
+ AddTwo(&j, &k, &m);
+ printf("j: %f, k: %f, m: %f\n", j, k, m);
 }
 
 void AddTwo(float *f, float *s, float *t) {
