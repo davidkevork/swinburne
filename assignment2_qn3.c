@@ -45,8 +45,8 @@ int main()
         // d is right
         // s is refresh
 
-        // when a key is clicked quick sort
-        if (key_typed(AKEY)) {
+        // when `s` key is clicked quick sort
+        if (key_typed(SKEY)) {
             int data[WINDOW_WIDTH-1];
             for (int i = 0; i < WINDOW_WIDTH-1; ++i) {
                 data[i] = arrayPtr[i].value;
@@ -56,8 +56,8 @@ int main()
                 arrayPtr[j].value = data[j];
             }
             shouldDraw = 1;
-        } else if (key_typed(DKEY)) {
-            // when d key is clicked quick sort and inverse the data
+        } else if (key_typed(RKEY)) {
+            // when `r` key is clicked quick sort and inverse the data
             int data[WINDOW_WIDTH-1];
             for (int i = 0; i < WINDOW_WIDTH-1; ++i) {
                 data[i] = arrayPtr[i].value;
@@ -71,8 +71,8 @@ int main()
                 arrayPtr[k].value = new_data[k];
             }
             shouldDraw = 1;
-        } else if (key_typed(SKEY)) {
-            // when s key is clicked fill it with new data
+        } else if (key_typed(FKEY)) {
+            // when `f` key is clicked fill it with new data
             fill_array(arrayPtr);
             shouldDraw = 1;
         }
