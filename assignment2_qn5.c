@@ -7,6 +7,7 @@
 
 int get_menu();
 int get_unit();
+char *write_unit(int unit);
 int get_calculation();
 double diameter_to_radius(double diameter);
 double random_value_generator(int min, int max);
@@ -24,22 +25,22 @@ int main()
             case 1:
                 unit = get_unit();
                 double radius = random_value_generator(5, 15);
+                printf("Radius given by random number generator is: %f %s\n", radius, write_unit(unit));
                 calc = get_calculation();
-                printf("Radius = %f\n", radius);
                 calc == 0 ?
-                printf("Area = %f%s\n", area(radius), (unit == 0 ? "cm" : "m"))
+                printf("Area = %f %s²\n", area(radius), write_unit(unit))
                           :
-                printf("Circumference = %f%s\n", circumference(radius), (unit == 0 ? "cm" : "m"));
+                printf("Circumference = %f %s\n", circumference(radius), write_unit(unit));
                 break;
             case 2:
                 unit = get_unit();
                 double diameter = random_value_generator(15, 30);
+                printf("Diameter given by random number generator is: %f %s\n", diameter, write_unit(unit));
                 calc = get_calculation();
-                printf("Diameter = %f\n", diameter);
                 calc == 0 ?
-                printf("Area = %f%s\n", area(diameter_to_radius(diameter)), (unit == 0 ? "cm" : "m"))
+                printf("Area = %f %s²\n", area(diameter_to_radius(diameter)), write_unit(unit))
                           :
-                printf("Circumference = %f%s\n", circumference(diameter_to_radius(diameter)), (unit == 0 ? "cm" : "m"));
+                printf("Circumference = %f %s\n", circumference(diameter_to_radius(diameter)), write_unit(unit));
                 break;
             default:
                 printf("Enter a valid number.\n");
@@ -55,7 +56,7 @@ int main()
  */
 int get_menu() {
     int menu = 0;
-    printf("Do you want to use radius or diameter for the calculation?\n");
+    printf("\nDo you want to use radius or diameter for the calculation?\n");
     printf("Enter 1 for radius\n");
     printf("Enter 2 for diameter\n");
     printf("Enter -1 to exit\n");
@@ -79,6 +80,15 @@ int get_unit() {
     } else {
         return get_unit();
     }
+}
+
+/**
+ * returns either cm or m based on unit
+ * @param unit
+ * @return unit
+ */
+char *write_unit(int unit) {
+    return (unit == 0 ? "cm" : "m");
 }
 
 /**
