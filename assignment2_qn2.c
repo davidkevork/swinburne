@@ -2,8 +2,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-#pragma clang diagnostic push
-#pragma ide diagnostic ignored "OCDFAInspection"
 typedef enum genre { Pop, Jazz, Classic, Rock, Metal } genre;
 const char* genre_s[] = { "Pop", "Jazz", "Classic", "Rock", "Metal" };
 
@@ -27,7 +25,7 @@ void print_album(album* albums);
 void show_options();
 
 int main(int argc, char const *argv[]) {
-    album_array album_new_array;
+    album_array album_new_array, new_album_array;
     int options = 0;
     album_new_array.size = 0;
     album_new_array.ptr = (album *) malloc( sizeof(album[0]) );
@@ -39,8 +37,14 @@ int main(int argc, char const *argv[]) {
             case 1:
                 // add an album
                 album_new_array.size += 1;
-                album_new_array.ptr = (album *) realloc(album_new_array.ptr,  sizeof(album[1]) * album_new_array.size);
-                add_album(&album_new_array.ptr[album_new_array.size-1]);
+                new_album_array.ptr = (album *) realloc(album_new_array.ptr, sizeof(album[1]) * album_new_array.size);
+                if (new_album_array.ptr) {
+                    album_new_array.ptr = new_album_array.ptr;
+                    add_album(&album_new_array.ptr[album_new_array.size-1]);
+                } else {
+                    printf("Out of memory! Cannot add dog details!\n");
+                    album_new_array.size -= 1;
+                }
                 break;
             case 2:
                 print_all_albums(album_new_array.ptr, album_new_array.size);
@@ -149,7 +153,7 @@ void select_track_to_play(album albums[], int size) {
         } while (track_number < 0 || track_number > number_of_tracks);
         printf("The track you selected %s, from Album: %s is now playing ... from file location: %s\n",
                albums[index].tracks[track_number], albums[index].album_name, albums[index].track_location);
-        char cmd[256] = "start ./";
+        char cmd[256] = "start ";
         strcat(cmd, albums[index].track_location);
         strcat(cmd, "/");
         strcat(cmd, albums[index].tracks[track_number]);
@@ -157,4 +161,3 @@ void select_track_to_play(album albums[], int size) {
         system(cmd);
     }
 }
-#pragma clang diagnostic pop
