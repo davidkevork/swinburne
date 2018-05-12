@@ -20,7 +20,10 @@ int main() {
     struct dog_array sample = {0, NULL};
     int options = 0;
     do {
-        printf("\nEnter option: ");
+        printf("\nEnter option:\n");
+        printf("1. Add new dog detail\n");
+        printf("2. Print all dog details\n");
+        printf("3. Quit app\n");
         scanf("%i", &options);
         switch (options) {
             case 1:
