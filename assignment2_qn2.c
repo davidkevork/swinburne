@@ -42,7 +42,7 @@ int main(int argc, char const *argv[]) {
                     album_new_array.ptr = new_album_array.ptr;
                     add_album(&album_new_array.ptr[album_new_array.size-1]);
                 } else {
-                    printf("Out of memory! Cannot add dog details!\n");
+                    printf("Out of memory! Cannot add album details!\n");
                     album_new_array.size -= 1;
                 }
                 break;
@@ -63,8 +63,10 @@ int main(int argc, char const *argv[]) {
 
     return 0;
 }
-#pragma clang diagnostic pop
 
+/**
+ * shows the option list to user
+ */
 void show_options() {
     printf("Enter the options:\n");
     printf("1: Add an album\n");
