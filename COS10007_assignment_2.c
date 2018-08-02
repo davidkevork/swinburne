@@ -39,7 +39,6 @@ int main(int argc, char const *argv[])
     {
       printf("Could not convert time input to time_t\n");
     }
-    printf("%s", ctime(&result));
   }
   else
   {
@@ -48,5 +47,14 @@ int main(int argc, char const *argv[])
 
   printf("Sys time: %s", asctime(Time.systime));
   printf("User time: %s", asctime(Time.usertime));
+
+  int totalSeconds = difftime(systime, mktime(Time.usertime));
+  int seconds = (totalSeconds % 60);
+  int minutes = (totalSeconds % 3600) / 60;
+  int hours = (totalSeconds % 86400) / 3600;
+  int days = (totalSeconds % (86400 * 30)) / 86400;
+  int months = (totalSeconds % (86400 * 30 * 12)) / (86400 * 30);
+  printf("Time difference is ");
+  printf("%i months, %i days, %i hours, %i minutes, %i seconds", months, days, hours, minutes, seconds);
   return 0;
 }
