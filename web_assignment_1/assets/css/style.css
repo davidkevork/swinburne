@@ -432,3 +432,7 @@ footer .footer-links {
     width: 100%;
   }
 }
+.toastify {
+  z-index: 100;
+  margin-top: 70px;
+}

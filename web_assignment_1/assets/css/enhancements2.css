@@ -1,0 +1,19 @@
+.enhancements2 > .row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.enhancements2 > .row > div {
+  margin: 4px;
+  background: linear-gradient(to right, #ff00cc, #333399);
+  font-size: 22px;
+  color: white;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 50px;
+}
+.enhancements2 > .row > .space {
+  width: 320px;
+}
