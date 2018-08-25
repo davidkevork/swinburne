@@ -1,0 +1,142 @@
+<?php
+  include './Classes/capture.php';
+  capture();
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Ceylon Textile Suppliers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="assets/css/normalize.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+</head>
+<body>
+  <header id="header">
+    <div class="header-center z-depth-2 center">
+      <div class="header-left">
+        <a href="/" class="logo"></a>
+        <nav>
+          <a href="index" class="header-link">Home</a>
+          <a href="jobs" class="header-link">Jobs</a>
+          <a href="apply" class="header-link active">Apply</a>
+          <a href="about" class="header-link">About</a>
+        </nav>
+      </div>
+      <div class="header-right">
+        <a href="enhancements" class="header-link">Enhancements</a>
+        <a href="enhancements2" class="header-link active">Enhancements 2</a>
+      </div>
+    </div>
+  </header>
+  <div class="container center">
+    <form class="apply-form" id="apply-form" method="post" action="processEOI">
+      <div>
+        <label for="job-reference-number" class="form-label">Job reference number</label>
+        <input type="text" minlength="6" maxlength="6" name="job-reference-number" id="job-reference-number" class="form-input" pattern="[a-zA-Z0-9\s]+" required readonly />
+      </div>
+      <div>
+        <label for="first-name" class="form-label">First name</label>
+        <input type="text" maxlength="20" name="first-name" id="first-name" class="form-input" pattern="[a-zA-Z\s]+" required />
+      </div>
+      <div>
+        <label for="last-name" class="form-label">Last name</label>
+        <input type="text" maxlength="20" name="last-name" id="last-name" class="form-input" pattern="[a-zA-Z\s]+" required />
+      </div>
+      <div>
+        <label for="date-of-birth" class="form-label">Date of birth</label>
+        <input type="text" name="date-of-birth" id="date-of-birth" class="form-input" placeholder="dd/mm/yyyy" pattern="(?:(?:31(\/)(?:0?[13578]|1[02]))\1|(?:(?:29|30)(\/)(?:0?[1,3-9]|1[0-2])\2))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|^(?:29(\/)0?2\3(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:0?[1-9]|1\d|2[0-8])(\/)(?:(?:0?[1-9])|(?:1[0-2]))\4(?:(?:1[6-9]|[2-9]\d)?\d{2})" required />
+      </div>
+      <div>
+        <fieldset>
+          <legend><label class="form-label">Gender</label></legend>
+          <div>
+            <label for="gender-m">Male</label>
+            <input type="radio" name="gender" id="gender-m" value="Male" required />
+            
+            <label for="gender-f">Female</label>
+            <input type="radio" name="gender" id="gender-f" value="Female" required />
+          </div>
+        </fieldset>
+      </div>
+      <div>
+        <label for="street-address" class="form-label">Street Address</label>
+        <input type="text" maxlength="40" name="street-address" id="street-address" class="form-input" required />
+      </div>
+      <div>
+        <label for="suburb-town" class="form-label">Suburb / Town</label>
+        <input type="text" maxlength="40" name="suburb-town" id="suburb-town" class="form-input" required />
+      </div>
+      <div>
+        <label for="state" class="form-label">State</label>
+        <select name="state" id="state" class="form-input" required>
+          <option value="">Select State</option>
+          <option value="VIC">VIC</option>
+          <option value="NSW">NSW</option>
+          <option value="QLD">QLD</option>
+          <option value="NT">NT</option>
+          <option value="WA">WA</option>
+          <option value="SA">SA</option>
+          <option value="TAS">TAS</option>
+          <option value="ACT">ACT</option>
+        </select>
+      </div>
+      <div>
+        <label for="postcode" class="form-label">Postcode</label>
+        <input type="number" min="0000" max="9999" name="postcode" id="postcode" class="form-input" required />
+      </div>
+      <div>
+        <label for="email-address" class="form-label">Email address</label>
+        <input type="email" name="email-address" id="email-address" class="form-input" required />
+      </div>
+      <div>
+        <label for="phone-number" class="form-label">Phone number</label>
+        <input type="tel" name="phone-number" id="phone-number" class="form-input" pattern="[0-9 ]{8,12}" required />
+      </div>
+      <div>
+        <fieldset>
+          <legend><label class="form-label">Skills</label></legend>
+          <div>
+            <p>
+              <input type="checkbox" name="skill-list[]" value="verbal-skill" id="verbal-skill" />
+              <label for="verbal-skill">Excellent verbal and written communication skills</label>
+            </p>
+            <p>
+              <input type="checkbox" name="skill-list[]" value="computer-skill" id="computer-skill" />
+              <label for="computer-skill">Strong computer skills, especially the MS Office suite</label>
+            </p>
+            <p>
+              <input type="checkbox" name="skill-list[]" value="energy-skill" id="energy-skill" />
+              <label for="energy-skill">A proactive self-starter, with lots of energy </label>
+            </p>
+            <p>
+              <input type="checkbox" name="skill-list[]" value="standards-skill" id="standards-skill" />
+              <label for="standards-skill">Ambition to succeed and high standards</label>
+            </p>
+            <p>
+              <input type="checkbox" name="skill-list[]" value="other" id="other" />
+              <label for="other">Other skills?</label>
+            </p>
+            <div>
+              <p><label for="other-skills" class="form-label">Other skills</label></p>
+              <textarea name="other-skills" id="other-skills" class="other-skills" rows="8"></textarea>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <div class="apply-button">
+        <button type="submit" class="btn btn-primary">Apply</button>
+      </div>
+    </form>
+  </div>
+  <footer>
+    <div class="footer-links">
+      &copy; 2018 <a href="mailto:102100902@swin.edu.au">102100902@swin.edu.au</a>
+    </div>
+  </footer>
+  <script type="text/javascript" src="assets/js/apply.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</body>
+</html>
