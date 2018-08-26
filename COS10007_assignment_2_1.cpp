@@ -35,7 +35,7 @@ void swap(int *a, int *b);
 int main()
 {
     // open the window and set colors
-    open_graphics_window("Assignment 2 - Q. 3 - Array Rectangles", WINDOW_WIDTH, WINDOW_HEIGHT);
+    open_graphics_window("Assignment 2 - Q. 1 - Sorting Algorithm", WINDOW_WIDTH, WINDOW_HEIGHT);
     load_default_colors();
     clear_screen(ColorWhite);
 
