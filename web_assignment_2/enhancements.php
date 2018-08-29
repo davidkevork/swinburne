@@ -25,6 +25,7 @@
         </nav>
       </div>
       <div class="header-right">
+        <a href="manage" class="header-link">Manage</a>
         <a href="enhancements" class="header-link active">Enhancements</a>
         <a href="enhancements2" class="header-link active">Enhancements 2</a>
       </div>

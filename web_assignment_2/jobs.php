@@ -25,6 +25,7 @@
         </nav>
       </div>
       <div class="header-right">
+        <a href="manage" class="header-link">Manage</a>
         <a href="enhancements" class="header-link">Enhancements</a>
         <a href="enhancements2" class="header-link active">Enhancements 2</a>
       </div>
@@ -45,7 +46,7 @@
       </ol>
     </aside>
     <div class="center" id="job-content">
-      <section class="card-wrapper" id="Fi7wUGa">
+      <section class="card-wrapper" id="Fi7wUG">
         <div class="card">
           <h2>Facebook</h2>
           <div>
@@ -71,7 +72,7 @@
           <div>
             <p class="half-block">
               <span class="bold">Reference:</span>
-              <span>Fi7wUGa</span>
+              <span>Fi7wUG</span>
             </p>
             <p class="half-block">
               <span class="bold">Responsibilities:</span>
