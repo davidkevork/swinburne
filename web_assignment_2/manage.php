@@ -2,8 +2,11 @@
   session_start();
   include './Classes/capture.php';
   require './Classes/Manage.class.php';
+  require_once './Classes/Table.class.php';
   capture();
+  $Table = new Table;
   $Manage = new Manage;
+  $Table->tableExists();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -42,14 +45,14 @@
           <?php
         } else {
           echo $Manage->data();
-          echo '<p><a href="delete" target="_blank">Delete Job Reference</a></p>';
+          echo '<p><a href="delete">Delete Job Reference</a></p>';
         }
       ?>
     </div>
     <script>
       $(document).ready(function() 
         { 
-            $("#manage-table").tablesorter({sortList:[[0,0],[2,1]], widgets: ['zebra']}); 
+            $("#manage-table").tablesorter({sortList:[], widgets: ['zebra']}); 
         } 
       );
   </script>

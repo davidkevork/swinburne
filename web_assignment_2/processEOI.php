@@ -1,10 +1,12 @@
 <?php
 
 require_once './Classes/Apply.class.php';
+require_once './Classes/Table.class.php';
 
 $Apply = new Apply;
+$Table = new Table;
 
-$Apply->tableExists();
+$Table->tableExists();
 $Apply->apply();
 
 ?>

@@ -480,3 +480,9 @@ table.tablesorter thead tr .trHeaderSortDown {
 table.tablesorter thead tr .trHeaderSortDown, table.tablesorter thead tr .trHeaderSortUp {
   background-color: #8dbdd8;
 }
+.edit {
+  width: 22px;
+  display: flex;
+  position: relative;
+  margin: auto auto;
+}

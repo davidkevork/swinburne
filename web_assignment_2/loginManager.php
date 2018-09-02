@@ -2,8 +2,11 @@
   session_start();
   include './Classes/capture.php';
   require './Classes/Manage.class.php';
+  require_once './Classes/Table.class.php';
   capture();
+  $Table = new Table;
   $Manage = new Manage;
+  $Table->tableExists();
   if ($Manage->isLoggedInSession()) {
     header("Location: manage");
   }
