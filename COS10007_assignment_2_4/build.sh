@@ -1,0 +1,1 @@
+gcc -o a.out main.c sort.c search.c
