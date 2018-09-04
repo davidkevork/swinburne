@@ -1,5 +1,6 @@
 #include <iostream>
 
+// diamond pattern
 int main(int argc, char const *argv[])
 {
     unsigned int width = 0;
@@ -11,6 +12,7 @@ int main(int argc, char const *argv[])
 
     int space = (width - 1) / 2;
     
+    // shows the top part of the pyramid
     for(size_t i = 1; i <= row; i++)
     {
         for(size_t j = 1; j <= (2 * space); j++)
@@ -27,6 +29,7 @@ int main(int argc, char const *argv[])
 
     space = 1;
     
+    // shows inverse pyramid
     for(size_t l = 1; l < row ; l++)
     {
         for(size_t m = 0; m < space; m++)
