@@ -42,7 +42,7 @@ const validatePostCode = (post, state) => {
         throw new Error(e);
       }
       break;
-    case 'NSW':
+    case 'NSW':W
       if (post.indexOf('1') !== 0 && post.indexOf('2') !== 0) {
         throw new Error(e);
       }

@@ -1,5 +1,6 @@
 <?php
   include './Classes/capture.php';
+  include './common.php';
   capture();
 ?>
 <!DOCTYPE html>
@@ -13,24 +14,7 @@
   <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
 </head>
 <body>
-  <header id="header">
-    <div class="header-center z-depth-2 center">
-      <div class="header-left">
-        <a href="/" class="logo"></a>
-        <nav>
-          <a href="index" class="header-link">Home</a>
-          <a href="jobs" class="header-link">Jobs</a>
-          <a href="apply" class="header-link">Apply</a>
-          <a href="about" class="header-link">About</a>
-        </nav>
-      </div>
-      <div class="header-right">
-        <a href="manage" class="header-link">Manage</a>
-        <a href="enhancements" class="header-link active">Enhancements</a>
-        <a href="enhancements2" class="header-link active">Enhancements 2</a>
-      </div>
-    </div>
-  </header>
+  <?php COMMON::header(); ?>
   <div class="container enhancements">
     <div class="canvas">
       <canvas id="canvas" width="400" height="200" style="border:1px solid #8a22b9;"></canvas>
@@ -50,11 +34,7 @@
       </map>
     </div>
   </div>
-  <footer>
-    <div class="footer-links">
-      &copy; 2018 <a href="mailto:102100902@swin.edu.au">102100902@swin.edu.au</a>
-    </div>
-  </footer>
+  <?php COMMON::footer(); ?>
   <script type="text/javascript">
     let canvas = document.getElementById('canvas');
     let ctx = canvas.getContext('2d');

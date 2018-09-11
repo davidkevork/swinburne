@@ -2,8 +2,8 @@
   session_start();
   include './Classes/capture.php';
   require './Classes/Manage.class.php';
-  include './common.php';
   require_once './Classes/Table.class.php';
+  include './common.php';
   capture();
   $Table = new Table;
   $Manage = new Manage;
@@ -33,21 +33,13 @@
             <p class="lead text-center">Please <a href="loginManager">login</a> to continue</p>
           <?php
         } else {
-          echo $Manage->data();
-          echo '<p><a href="delete">Delete Job Reference</a></p>';
-          echo '<p><a href="searchName">Search by Name</a></p>';
-          echo '<p><a href="searchEOI">Search by EOI number</a></p>';
+          if (isset($_GET['sort']) && isset($_GET['by'])) {
+            echo $Manage->dataSort($_GET['sort'], $_GET['by']);
+          }
           echo $Manage->sortDropdown();
         }
       ?>
     </div>
     <?php COMMON::footer(); ?>
-    <script>
-      $(document).ready(function() 
-        { 
-            $("#manage-table").tablesorter({sortList:[], widgets: ['zebra']}); 
-        } 
-      );
-  </script>
   </body>
 </html>

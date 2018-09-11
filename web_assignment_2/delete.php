@@ -1,6 +1,7 @@
 <?php
   session_start();
   include './Classes/capture.php';
+  include './common.php';
   require './Classes/Manage.class.php';
   require_once './Classes/Table.class.php';
   capture();
@@ -27,21 +28,9 @@
     <script src="assets/js/jquery.tablesorter.pager.js"></script>
   </head>
   <body>
-    <header id="header">
-      <div class="header-center z-depth-2 center">
-        <div class="header-left">
-          <a href="/" class="logo"></a>
-          <nav>
-            <a href="manage" class="header-link">Manage</a>
-          </nav>
-        </div>
-        <div class="header-right">
-          <a href="logout" class="header-link">Logout</a>
-        </div>
-      </div>
-    </header>
+    <?php COMMON::headerManage(); ?>
     <div class="container">
-    <form method="POST" action="delete">
+      <form method="POST" action="delete">
         <div class="form-group">
           <label for="InputRef">Job Reference</label>
           <input type="text" name="deleteRef" class="form-control" id="InputRef" placeholder="Job reference">
@@ -50,5 +39,6 @@
       </form>
       <div><p><?php echo $Manage->delete(); ?></p></div>
     </div>
+    <?php COMMON::footer(); ?>
   </body>
 </html>

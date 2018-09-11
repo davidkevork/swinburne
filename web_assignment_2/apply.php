@@ -1,5 +1,6 @@
 <?php
   include './Classes/capture.php';
+  include './common.php';
   capture();
 ?>
 <!DOCTYPE html>
@@ -14,24 +15,7 @@
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 </head>
 <body>
-  <header id="header">
-    <div class="header-center z-depth-2 center">
-      <div class="header-left">
-        <a href="/" class="logo"></a>
-        <nav>
-          <a href="index" class="header-link">Home</a>
-          <a href="jobs" class="header-link">Jobs</a>
-          <a href="apply" class="header-link active">Apply</a>
-          <a href="about" class="header-link">About</a>
-        </nav>
-      </div>
-      <div class="header-right">
-        <a href="manage" class="header-link">Manage</a>
-        <a href="enhancements" class="header-link">Enhancements</a>
-        <a href="enhancements2" class="header-link active">Enhancements 2</a>
-      </div>
-    </div>
-  </header>
+  <?php COMMON::header(); ?>
   <div class="container center">
     <form class="apply-form" id="apply-form" method="post" action="processEOI">
       <div>
@@ -128,15 +112,11 @@
         </fieldset>
       </div>
       <div class="apply-button">
-        <button type="submit" class="btn btn-primary">Apply</button>
+        <button type="submit" name="editApplication" class="btn btn-primary">Apply</button>
       </div>
     </form>
   </div>
-  <footer>
-    <div class="footer-links">
-      &copy; 2018 <a href="mailto:102100902@swin.edu.au">102100902@swin.edu.au</a>
-    </div>
-  </footer>
+  <?php COMMON::footer(); ?>
   <script type="text/javascript" src="assets/js/apply.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </body>

@@ -1,8 +1,8 @@
 <?php
   session_start();
+  include './common.php';
   include './Classes/capture.php';
   require './Classes/Manage.class.php';
-  include './common.php';
   require_once './Classes/Table.class.php';
   capture();
   $Table = new Table;
@@ -33,21 +33,20 @@
             <p class="lead text-center">Please <a href="loginManager">login</a> to continue</p>
           <?php
         } else {
-          echo $Manage->data();
-          echo '<p><a href="delete">Delete Job Reference</a></p>';
-          echo '<p><a href="searchName">Search by Name</a></p>';
-          echo '<p><a href="searchEOI">Search by EOI number</a></p>';
-          echo $Manage->sortDropdown();
+          if (isset($_GET['search'])) {
+            echo $Manage->searchName($_GET['search']);
+          } else {
+            echo '<form method="GET" action="searchName">
+            <div class="form-group">
+              <label for="search">First name or Last name</label>
+              <input type="text" name="search" class="form-control" id="search" placeholder="First name or last name">
+            </div>
+            <button type="submit" name="searchBtn" class="btn btn-primary">Search</button>
+          </form>';
+          }
         }
       ?>
     </div>
     <?php COMMON::footer(); ?>
-    <script>
-      $(document).ready(function() 
-        { 
-            $("#manage-table").tablesorter({sortList:[], widgets: ['zebra']}); 
-        } 
-      );
-  </script>
   </body>
 </html>
