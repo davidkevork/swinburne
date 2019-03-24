@@ -1,0 +1,6 @@
+/home/david/Projects/CounterObject/CounterObject/bin/Debug/CounterObject.exe
+/home/david/Projects/CounterObject/CounterObject/bin/Debug/CounterObject.pdb
+/home/david/Projects/CounterObject/CounterObject/obj/x86/Debug/CounterObject.csprojAssemblyReference.cache
+/home/david/Projects/CounterObject/CounterObject/obj/x86/Debug/CounterObject.csproj.CoreCompileInputs.cache
+/home/david/Projects/CounterObject/CounterObject/obj/x86/Debug/CounterObject.exe
+/home/david/Projects/CounterObject/CounterObject/obj/x86/Debug/CounterObject.pdb
