@@ -100,7 +100,8 @@ namespace MyGame
         [Test]
         public void TestAddIdentifier ()
         {
-            Identify ident = new Identify (new string [] { "ID1" });
+            Identify ident = new Identify (new string [] {});
+            ident.AddIdentifier ("ID1");
 
             Assert.AreEqual ("id1", ident.FirstId, "Should turn id to LowerCase before inserting");
         }
