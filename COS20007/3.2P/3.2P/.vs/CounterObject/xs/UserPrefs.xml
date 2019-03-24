@@ -1,0 +1,30 @@
+﻿<Properties StartupConfiguration="{5C32D5E9-333D-462F-A6BF-12370BDA546B}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CounterObject/NUnitTestCounter.cs">
+    <Files>
+      <File FileName="CounterObject/NUnitTestCounter.cs" Line="19" Column="50" />
+    </Files>
+    <Pads>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="CounterObject" expanded="True">
+            <Node name="CounterObject" expanded="True">
+              <Node name="CounterObject" expanded="True">
+                <Node name="NUnitTestClock" expanded="True">
+                  <Node name="Test_tick_Elapsed" selected="True" />
+                </Node>
+                <Node name="NUnitTestCounter" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.CounterObject PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
