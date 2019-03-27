@@ -5,16 +5,16 @@ namespace CounterObject
 {
     public class Clock
     {
-        private int _hour;
-        private int _minute;
-        private int _second;
+        private Counter _hour;
+        private Counter _minute;
+        private Counter _second;
         private Timer _tick;
 
         public Clock()
         {
-            _hour = 0;
-            _minute = 0;
-            _second = 0;
+            _hour = new Counter("Hour");
+            _minute = new Counter("Minute");
+            _second = new Counter("Second");
 
             _tick = new Timer();
             _tick.Interval = 100;
@@ -25,27 +25,32 @@ namespace CounterObject
 
         private void _tick_Elapsed(object sender, ElapsedEventArgs e)
         {
-            if (_second < 60)
+            Tick();
+        }
+
+        public void Tick()
+        {
+            if (_second.Value < 60)
             {
-                _second++;
+                _second.Increment();
             }
             else
             {
-                _second = 0;
-                if (_minute < 60)
+                _second.Reset();
+                if (_minute.Value < 60)
                 {
-                    _minute++;
+                    _minute.Increment();
                 }
                 else
                 {
-                    _minute = 0;
-                    if (_hour < 24)
+                    _minute.Reset();
+                    if (_hour.Value < 24)
                     {
-                        _hour++;
+                        _hour.Increment();
                     }
                     else
                     {
-                        _hour = 0;
+                        _hour.Reset();
                     }
                 }
 
@@ -56,15 +61,15 @@ namespace CounterObject
         {
             get
             {
-                return (_hour).ToString("00") + ":" + (_minute).ToString("00") + ":" + (_second).ToString("00");
+                return (_hour.Value).ToString("00") + ":" + (_minute.Value).ToString("00") + ":" + (_second.Value).ToString("00");
             }
         }
 
         public void Reset()
         {
-            _hour = 0;
-            _minute = 0;
-            _second = 0;
+            _hour.Reset();
+            _minute.Reset();
+            _second.Reset();
         }
     }
 }

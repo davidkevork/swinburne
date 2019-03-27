@@ -16,8 +16,6 @@ namespace CounterObject
 
         public static void Main(string[] args)
         {
-            Clock c = new Clock();
-            Console.WriteLine(c.Time);
             Counter[] myCounters = new Counter[3];
 
             myCounters[0] = new Counter("Counter 1");
@@ -38,11 +36,10 @@ namespace CounterObject
             myCounters[2].Reset();
             PrintCounters(myCounters);
 
-            double d = 0;
-            for (int i = 0; i < 200 * 1000 * 1000; i++)
-            {
-                d += 1;
-            }
+            Clock c = new Clock();
+            c.Tick();
+            c.Tick();
+            c.Tick();
             Console.WriteLine(c.Time);
         }
     }
