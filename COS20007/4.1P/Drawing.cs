@@ -63,7 +63,7 @@ namespace MyGame
         public void SelectShapesAt (Point2D pt)
         {
             foreach (Shape shape in _shapes) {
-                shape.Selected = shape.isAt (pt) ? true : false;
+                shape.Selected = shape.IsAt (pt) ? true : false;
             }
         }
 

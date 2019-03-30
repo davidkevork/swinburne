@@ -78,7 +78,7 @@ namespace MyGame
                 if (SwinGame.KeyTyped (KeyCode.vk_SPACE)) {
                     myDrawing.Background = SwinGame.RandomRGBColor (255);
                 }
-                SwinGame.myDrawingFramerate (0,0);
+                SwinGame.DrawFramerate (0,0);
 
                 //myDrawing onto the screen
                 SwinGame.RefreshScreen (60);
