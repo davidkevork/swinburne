@@ -37,7 +37,7 @@ namespace MyGame
 
         public override void DrawOutline ()
         {
-            SwinGame.DrawCircle (Color.Black, X - 2, Y - 2, _radius + 2);
+            SwinGame.DrawCircle (Color.Black, X, Y, _radius + 2);
         }
 
         public override Boolean IsAt (Point2D pt)
