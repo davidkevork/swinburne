@@ -1,0 +1,14 @@
+{
+  "ProjectFilePath": "/home/david/Documents/swinburne/COS20007/1.3P/CounterObject/CounterObject/CounterObject.csproj",
+  "TargetFramework": "v4.7",
+  "TagHelpers": [],
+  "Configuration": {
+    "ConfigurationName": "UnsupportedRazor",
+    "LanguageVersion": "1.0",
+    "Extensions": [
+      {
+        "ExtensionName": "UnsupportedRazorExtension"
+      }
+    ]
+  }
+}
