@@ -97,7 +97,7 @@ namespace MyGame
 
         public void Load (string filename)
         {
-            StreamReader reader = new StreamReader (filename;
+            StreamReader reader = new StreamReader (filename);
             int count;
             Shape shape;
             string kind = null;

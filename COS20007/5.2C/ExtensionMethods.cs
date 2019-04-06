@@ -7,7 +7,7 @@ namespace MyGame
     {
         public static int ReadInteger (this StreamReader reader)
         {
-            return Convert.ToInt32 (reader.ReadLine ()s);
+            return Convert.ToInt32 (reader.ReadLine ());
         }
     }
 }
