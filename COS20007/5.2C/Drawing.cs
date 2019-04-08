@@ -117,6 +117,9 @@ namespace MyGame
                         case "Circle":
                             shape = new Circle();
                             break;
+                        case "Line":
+                            shape = new Line();
+                            break;
                         default:
                             throw new InvalidDataException ("Unkown shape kind: " + kind);
                      }
