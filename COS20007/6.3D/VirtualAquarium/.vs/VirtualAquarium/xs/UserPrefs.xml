@@ -1,0 +1,25 @@
+﻿<Properties StartupConfiguration="{C092355B-3A8C-4062-BD9E-6D1671277A0D}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="VirtualAquarium/Program.cs">
+    <Files>
+      <File FileName="VirtualAquarium/Program.cs" Line="75" Column="29" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="VirtualAquarium" expanded="True">
+            <Node name="VirtualAquarium" expanded="True">
+              <Node name="Program.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.VirtualAquarium PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

@@ -1,0 +1,6 @@
+/home/david/Desktop/university/COS20007/VirtualAquarium/VirtualAquarium/VirtualAquarium/obj/x86/Debug/VirtualAquarium.csprojAssemblyReference.cache
+/home/david/Desktop/university/COS20007/VirtualAquarium/VirtualAquarium/VirtualAquarium/obj/x86/Debug/VirtualAquarium.csproj.CoreCompileInputs.cache
+/home/david/Desktop/university/COS20007/VirtualAquarium/VirtualAquarium/VirtualAquarium/bin/Debug/VirtualAquarium.exe
+/home/david/Desktop/university/COS20007/VirtualAquarium/VirtualAquarium/VirtualAquarium/bin/Debug/VirtualAquarium.pdb
+/home/david/Desktop/university/COS20007/VirtualAquarium/VirtualAquarium/VirtualAquarium/obj/x86/Debug/VirtualAquarium.exe
+/home/david/Desktop/university/COS20007/VirtualAquarium/VirtualAquarium/VirtualAquarium/obj/x86/Debug/VirtualAquarium.pdb
